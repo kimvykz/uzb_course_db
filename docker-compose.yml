@@ -1,6 +1,5 @@
-version: '3.7'
 
-service:
+services:
   postgres:
     build: .
     container_name: employees_db_uzb
