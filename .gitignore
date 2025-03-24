@@ -1,0 +1,8 @@
+# Ignore Docker-related files
+**/postgres_data/
+**/.data/
+*.log
+docker-compose.override.yml
+
+# Ignore build directories (if present)
+build/

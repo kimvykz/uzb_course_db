@@ -1,0 +1,25 @@
+version: '3.7'
+
+service:
+  postgres:
+    build: .
+    container_name: employees_db_uzb
+    environment:
+      - POSTGRES_USER=root1
+      - POSTGRES_PASSWORD=root1
+      - POSTGRES_DB=employees
+    ports:
+      - "5444:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - .data:/data
+    networks:
+      - uzb_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  uzb_network: 
+    driver: bridge
