@@ -7,6 +7,6 @@ ENV POSTGRES_PASSWORD=root1
 ENV POSTGRES_DB=employees
 
 # don't need to create schema separately
-COPY init.sql /docker-entrypoint-initdb.d/001_init.sql
+#COPY init.sql /docker-entrypoint-initdb.d/001_init.sql
 
 EXPOSE 5432

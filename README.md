@@ -34,7 +34,7 @@ select  gs as id,
 'Simpson', 'Turner', 'Usher', 'Vaughn', 'Watson', 'Xu', 'Yates', 'Zuniga', 'Abbott', 'Benson',  
 'Chavez', 'Delgado', 'Elliott', 'Foster', 'Gibson', 'Hughes', 'Irving', 'Jackson', 'Keller', 'Lloyd',  
 'Marshall', 'Navarro', 'Ortiz', 'Patel', 'Quintero', 'Rodriguez', 'Sanders', 'Tucker', 'Ulrich', 'Vasquez'])[floor(random() * 100) + 1] as last_name,
-		(array['M', 'F'])[ceiling(random() * 2)]::employee_gender as gender,
+		(array['M', 'F'])[ceiling(random() * 2)] as gender,
 		DATE '2000-01-01' + (random() * (DATE '2025-03-31' - DATE '2000-01-01'))::int AS hire_date
 from generate_series(600000, 3000000) gs;
 

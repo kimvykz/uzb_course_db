@@ -10,14 +10,9 @@ services:
     ports:
       - "5444:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - .data:/data
+      - ./.data/postgres:/var/lib/postgresql/data
     networks:
       - uzb_network
-
-volumes:
-  postgres_data:
-    driver: local
 
 networks:
   uzb_network: 
